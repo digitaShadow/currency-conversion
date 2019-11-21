@@ -14,15 +14,59 @@
     }
     
     
-    $.ajax({
-  url: 'http://usercountry.com/v1.0/json/173.194.192.101',
-  dataType: 'json',
-  success: function(result) {
-    result.currency.code;
-  }
-});
+   // $.ajax({
+  //url: 'http://usercountry.com/v1.0/json/173.194.192.101',
+ // dataType: 'json',
+//  success: function(result) {
+//    result.currency.code;
+ // }
+//});
     
+  function ff(x){
+			document.getElementById("rupee").value = x*154;
+			document.getElementById("cad").value = x*1.33;
+            document.getElementById("aud").value = x*1.47;
+            document.getElementById("gbp").value = x* 0.77;
+            document.getElementById("eur").value = x*0.90;
+		}
+  
      </script>
      
+    
+    
+    
+    	<div class="container">
+		<fieldset>
+			<legend>Currency Converter</legend>
+			<table>
+				<tr>
+					<td>USD</td>
+					<td><input type="text" name="" id="dollar" oninput="ff(this.value)"></td>
+				</tr>
+				<tr>
+					<td>PKR</td>
+					<td><input type="text" name="" id="rupee"></td>
+				</tr>
+				<tr>
+					<td>CAD</td>
+					<td><input type="text" name="" id="cad"></td>
+				</tr>
+              <tr>
+					<td>AUD</td>
+					<td><input type="text" name="" id="aud"></td>
+				</tr>
+				<tr>
+					<td>GBP</td>
+					<td><input type="text" name="" id="gbp"></td>
+				</tr>
+              <tr>
+					<td>Euro</td>
+					<td><input type="text" name="" id="eur"></td>
+				</tr>
+				
+			</table>
+		</fieldset>
+	</div>
+
   </body>
   </html>
