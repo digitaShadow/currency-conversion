@@ -1,0 +1,28 @@
+<html>
+  <head>
+  <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+  </head>
+  
+  <body>
+  
+       
+     Product A costs $321 
+<script language="Javascript">
+    if (geoplugin_currencyCode() != 'USD') 
+    {
+        document.write('('+ " " +geoplugin_currencyConverter(321)+')');
+    }
+    
+    
+    $.ajax({
+  url: 'http://usercountry.com/v1.0/json/173.194.192.101',
+  dataType: 'json',
+  success: function(result) {
+    result.currency.code;
+  }
+});
+    
+     </script>
+     
+  </body>
+  </html>
